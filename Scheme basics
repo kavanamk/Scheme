@@ -1,0 +1,98 @@
+//lots of brackets
+
+(define (length l))
+  (if (equal? length 0))
+    0
+  (1+(length(cdr l)))
+
+LITERALS
+
+5 //number
+"hello" //string
+'hello //symbol
+
+AIRTHMETIC EXP 
+
+(1 + 2) //infix
+(+ 10 20) //prefix
+(10 23 +) //postfix
+
+FUNCTIONS 
+
+(define (f param1 param2...param_n)) //seq of exp
+  (begin e1 e2 .. e_n)               //evaluated for side effect
+
+(define (square n) (n * n))
+(square 5)
+(square(square5))
+square 5 //does not work
+
+CONDITIONALS
+
+(define (zero n) (= n 0))
+
+(define (safeDivide m n)
+  (if (= n 0)
+    "divide by zero"
+    (/m n)))
+)
+
+RECURSION
+
+(define (fact n)
+ (if (= n 0)
+    1
+    (* n (- n 1)))
+)
+
+CON CELLS - pair of 2 pieces of data
+
+(cons 1 2) //pair of nums
+(cons "hello" "world") //pairs of string
+(cons "hello" 1) //pair of num and str
+
+car(cons(1 2 3 4)) //returns 1st element -> 1
+cdr(cons(12 2 3 4)) //returns everything but 1st element -> 2 3 4
+
+LINKED LISTS 
+
+() //empty list
+(cons(41 ())) //1 element
+(cons 1 (cons 2 (cons 3 ()))) //linked list with 3 elements
+((11 12) 21 (31 32)) //tree
+
+LISTS
+
+(quote(1))
+(quote(1 2 3))
+
+'(3)
+'(1 2 3)
+
+(list 3)
+(list 1 2 3)
+
+EQUALITY FOR LISTS
+
+// eq? for pointer equality -> compares 2 pointers
+(eq? (cons 1(cons 2)) '(1 2))
+
+//equal? for structural equality -> traverses 2 structures
+(equal? (cons 1(cons 2)) '(1 2))
+
+RECURSION 
+
+(define (length l))
+  (if (equal? length 0))
+    0
+  (1+(length(cdr l)))
+
+
+DYNAMIC TYPES
+
+(symbol? 'x)
+(number? 1)
+(boolean? #t)
+(string? "hi")
+(pair? '(1 2))
+(list? '(1))
